@@ -31,8 +31,6 @@
       vm.setHeroCard = function () {
         var post = RedditPost.get();
         vm.post = post;
-        $scope.post = post;
-        $rootScope.postUrl = post.data.url;
       };
 
 

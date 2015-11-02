@@ -13,8 +13,8 @@
     this.imgUrl = imgUrl;
 
     function imgUrl(url){
-      var image_URL = /http|https/i.test(url) ? url : "assets/images/unknown.png";
-      return image_URL;
+      var imageURL = /http|https/i.test(url) ? url : "assets/images/unknown.png";
+      return imageURL;
     }
 
     function get() {

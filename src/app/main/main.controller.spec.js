@@ -5,11 +5,11 @@
 
     beforeEach(module('redditSearchShare'));
 
-    it('should define more than 5 awesome things', inject(function($controller) {
-      var vm = $controller('MainController');
+    it('MainController should be defined', inject(function($rootScope, $controller) {
+      var scope = $rootScope.$new();
+      var vm = $controller('MainController', {$scope: scope});
+      expect(vm).toBeDefined();
 
-      expect(angular.isArray(vm.awesomeThings)).toBeTruthy();
-      expect(vm.awesomeThings.length > 5).toBeTruthy();
     }));
   });
 })();
