@@ -22,14 +22,17 @@
     return directive;
 
     /** @ngInject */
-    function ModalCtrl($scope, RedditPost) {
+    function ModalCtrl($rootScope, $scope, RedditPost) {
       var vm = this;
       vm.post;
 
       vm.imgURL = RedditPost.imgUrl;
 
       vm.setHeroCard = function () {
-          vm.post = RedditPost.get();
+        var post = RedditPost.get();
+        vm.post = post;
+        $scope.post = post;
+        $rootScope.postUrl = post.data.url;
       };
 
 
@@ -43,11 +46,10 @@
       scope.$on('close-modal', closeModal);
 
       el.on('click', function ($event) {
-        if($event.target === $event.currentTarget){
+        if ($event.target === $event.currentTarget) {
           closeModal();
         }
       });
-
 
 
       function openModal() {
