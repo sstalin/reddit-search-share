@@ -1,0 +1,22 @@
+
+.icon-comments, .icon-ups, .icon-downs{
+  background-image: url('../assets/images/icon-sprite.png');
+  background-repeat: no-repeat;
+  width: 16px;
+  height:16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.icon-comments{
+  background-position: 0 0;
+}
+
+.icon-ups{
+  background-position: 0 -16px;
+}
+
+.icon-downs{
+  background-position: 0 -32px;
+}

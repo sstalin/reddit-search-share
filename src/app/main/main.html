@@ -1,0 +1,31 @@
+<header class="navbar">
+  <div class="content">
+    <span class="logo">Reddit</span>
+
+    <div class="search">
+      <input type="text" ng-model="search_category" value="{{search_category}}"/>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <ul class="no-bullet">
+    <li class="post clearfix" ng-repeat="post in vm.posts" ng-click="vm.popModal(post);">
+      <div class="img-container pull-left">
+        <img ng-src="{{vm.imgURL(post.data.thumbnail);}}" alt=""/>
+      </div>
+      <div class="details">
+        <header class="author">{{post.data.author}}</header>
+        <p>{{post.data.title}}</p>
+        <footer>
+          <div class="icon icon-comments"></div>
+          <small class="crumb">{{post.data.num_comments}} comments</small>
+          <div class="icon icon-ups"></div>
+          <small class="crumb">{{post.data.ups}} ups</small>
+          <div class="icon icon-downs"></div>
+          <small class="crumb">{{post.data.downs}} downs</small>
+        </footer>
+      </div>
+    </li>
+  </ul>
+</div>
+

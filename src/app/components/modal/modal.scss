@@ -1,0 +1,112 @@
+.modal-dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: 4;
+
+  .content {
+    position: relative;
+    top: 150px;
+    width: 50%;
+    margin: 0 auto;
+    z-index: 5;
+
+    .card {
+      background-color: #F4F4F4;
+      border-radius: 20px;
+      padding: 20px;
+      z-index: 5;
+
+    }
+
+    .hero {
+      width: 180px;
+
+      .img-container {
+        width: 80px;
+        height: 80px;
+      }
+
+      .details {
+        margin: 0;
+
+        small{
+          font-size: 0.6em;
+          font-weight: 600;
+          color: #666;
+        }
+        .author{
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+
+      footer{
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      img {
+        position: relative;
+      }
+    }
+
+    .hint-box {
+      width: 100px;
+      margin: 0 auto;
+      padding: 0 20%;
+      position: relative;
+      top: 100px;
+
+      .hint {
+        color: #FFF;
+        font-weight: 600;
+      }
+    }
+
+    .mail {
+      width: 180px;
+      height: 100px;
+      color: deepskyblue;
+      text-align: center;
+      background-color: #FFF;
+      img {
+        width: 40%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    .reddit {
+      width: 180px;
+      height: 100px;
+      color: deepskyblue;
+      text-align: center;
+      background-color: #FFF;
+      img {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  background-color: #000000;
+  z-index: 3;
+}

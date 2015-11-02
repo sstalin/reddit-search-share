@@ -1,0 +1,31 @@
+<div class="content">
+  <div draggable="true" class="card hero post pull-left">
+    <div class="img-container">
+      <img ng-src="{{vm.imgURL(vm.post.data.thumbnail);}}" alt=""/>
+    </div>
+    <div class="details">
+      <header class="author">{{vm.post.data.author}}</header>
+      <small>{{vm.post.data.title}}</small>
+      <footer>
+        <div class="icon icon-comments"></div>
+        <small class="crumb">{{vm.post.data.num_comments}}</small>
+        <div class="icon icon-ups"></div>
+        <small class="crumb">{{vm.post.data.ups}}</small>
+      </footer>
+    </div>
+  </div>
+  <div class="pull-right">
+    <div class="card reddit">
+      <img src="../assets/images/reddit-logo.png" alt=""/>
+      <h3>Open on Reddit</h3>
+    </div>
+    <br/>
+    <div class="card mail">
+      <img draggable="false" src="../assets/images/mail-logo.png" alt=""/>
+      <h3>Email to a Friend</h3>
+    </div>
+  </div>
+  <div class="hint-box">
+    <small class="hint">Drag the card on the left to the desired action</small>
+  </div>
+</div>
